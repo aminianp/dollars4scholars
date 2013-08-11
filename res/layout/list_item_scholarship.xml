@@ -12,6 +12,7 @@
 
     <CheckBox
         android:id="@+id/favourite"
+        style="?android:attr/starStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true" />
@@ -23,22 +24,33 @@
         android:layout_alignParentRight="true"
         android:layout_below="@id/favourite"
         android:layout_margin="5dp"
-        android:padding="0dp"
-        android:text="@string/apply" />
+        android:background="@drawable/btn_dollas_theme"
+        android:text="@string/apply"
+        android:textColor="@android:color/white" />
 
     <ImageButton
         android:id="@+id/tracker"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_toLeftOf="@id/favourite"
-        android:scaleType="centerCrop"
+        android:background="@null"
         android:contentDescription="@string/cd_scholarship_alert"
-        android:src="@android:drawable/ic_dialog_alert" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/btn_alert" />
 
     <TextView
         android:id="@+id/due_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name" />
+
+    <TextView
+        android:id="@+id/dollar_amount"
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/due_date" />
 
 </RelativeLayout>

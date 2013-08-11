@@ -71,12 +71,14 @@ public class ScholarshipsAdapter extends BaseAdapter {
 		holder.tracker.setOnClickListener(new AlertButtonListener(scholarshipId, activity));
 		holder.favourite.setChecked(scholarship.isFavourite());
 		holder.apply.setOnClickListener(new ApplyButtonListener(scholarshipId));
+		holder.dollarAmount.setText("$1,500");
 	}
 
 	private class ViewHolder {
 
 		private TextView name;
 		private TextView dueDate;
+		private TextView dollarAmount;
 		private ImageButton tracker;
 		private CheckBox favourite;
 		private Button apply;
@@ -84,6 +86,7 @@ public class ScholarshipsAdapter extends BaseAdapter {
 		public ViewHolder(View convertView) {
 			this.name = (TextView) convertView.findViewById(R.id.name);
 			this.dueDate = (TextView) convertView.findViewById(R.id.due_date);
+			this.dollarAmount = (TextView) convertView.findViewById(R.id.dollar_amount);
 			this.tracker = (ImageButton) convertView.findViewById(R.id.tracker);
 			this.favourite = (CheckBox) convertView.findViewById(R.id.favourite);
 			this.apply = (Button) convertView.findViewById(R.id.apply);
