@@ -1,6 +1,6 @@
 package com.dollars4scholars.adapters;
 
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +18,9 @@ import com.example.dollars4scholars.R;
 public class ScholarshipsAdapter extends BaseAdapter {
 
 	private final Scholarship[] scholarships;
-	private final Activity activity;
+	private final FragmentActivity activity;
 
-	public ScholarshipsAdapter(Scholarship[] scholarships, Activity activity) {
+	public ScholarshipsAdapter(Scholarship[] scholarships, FragmentActivity activity) {
 		this.scholarships = scholarships;
 		this.activity = activity;
 	}

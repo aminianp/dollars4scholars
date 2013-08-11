@@ -4,9 +4,17 @@ public class Scholarship {
 
 	private String id;
 	private String name;
-	private String dueDate;
 	private boolean isOnTrack;
 	private boolean isFavourite;
+	private String dueDate;
+
+	public Scholarship(String id, String name, boolean isOnTrack, boolean isFavourite, String dueDate) {
+		this.id = id;
+		this.name = name;
+		this.dueDate = dueDate;
+		this.isOnTrack = isOnTrack;
+		this.isFavourite = isFavourite;
+	}
 
 	public String getId() {
 		return id;

@@ -1,8 +1,8 @@
 package com.dollars4scholars.listeners;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
@@ -13,9 +13,9 @@ import com.example.dollars4scholars.R;
 public class AlertButtonListener implements OnClickListener {
 
 	private String scholarshipId;
-	private Activity activity;
+	private FragmentActivity activity;
 
-	public AlertButtonListener(String scholarshipId, Activity activity) {
+	public AlertButtonListener(String scholarshipId, FragmentActivity activity) {
 		this.activity = activity;
 		this.scholarshipId = scholarshipId;
 	}
@@ -37,9 +37,9 @@ public class AlertButtonListener implements OnClickListener {
 
 	private class AlertTrackerListener implements DialogInterface.OnClickListener {
 
-		private Activity activity;
+		private FragmentActivity activity;
 
-		public AlertTrackerListener(Activity activity) {
+		public AlertTrackerListener(FragmentActivity activity) {
 			this.activity = activity;
 		}
 
