@@ -14,7 +14,7 @@ public class ApplyButtonListener implements OnClickListener {
 	
 	@Override
 	public void onClick(View view) {
-		Toast.makeText(view.getContext(), "Though Shalt Apply: " + id , Toast.LENGTH_SHORT).show();
+		Toast.makeText(view.getContext(), "Applied: " + id , Toast.LENGTH_SHORT).show();
 	}
 	
 }
