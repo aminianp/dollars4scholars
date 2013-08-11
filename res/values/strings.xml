@@ -4,5 +4,6 @@
     <string name="app_name">dollars4scholars</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="apply">A</string>
 
 </resources>

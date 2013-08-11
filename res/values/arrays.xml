@@ -1,0 +1,9 @@
+<resources>
+
+    <string-array name="navigation_options">
+        <item>Scholarships</item>
+        <item>Update Info</item>
+        <item>Calendar</item>
+    </string-array>
+
+</resources>
