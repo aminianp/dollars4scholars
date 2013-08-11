@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.dollars4scholars.utils.FragmentUtils;
+import com.dollars4scholars.utils.FragmentHelper;
 import com.example.dollars4scholars.R;
 
 public class MainActivity extends FragmentActivity {
@@ -24,6 +24,7 @@ public class MainActivity extends FragmentActivity {
 	private ActionBarDrawerToggle drawerToggle;
 	private DrawerLayout drawerLayout;
 	private ListView drawerList;
+	private FragmentHelper helper;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends FragmentActivity {
 
 		menuTitles = getResources().getStringArray(R.array.navigation_options);
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		helper = FragmentHelper.newInstance(this);
 
 		initNavigationDrawer();
 
@@ -75,7 +77,6 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	private void selectItem(int position) {
-		Toast.makeText(this, "Do the Fragment Replacement Magic!", Toast.LENGTH_SHORT).show();
 		pushFragment(position);
 
 		drawerList.setItemChecked(position, true);
@@ -86,10 +87,11 @@ public class MainActivity extends FragmentActivity {
 	private void pushFragment(int position) {
 		switch (position) {
 			case 0:
-				FragmentUtils.pushScholarshipsFragment(this);
+				helper.pushScholarshipsFragment();
 				break;
 
 			default:
+				Toast.makeText(this, "Do the Fragment Replacement Magic!", Toast.LENGTH_SHORT).show();
 				break;
 		}
 	}
