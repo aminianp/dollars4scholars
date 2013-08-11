@@ -32,6 +32,7 @@
         android:layout_height="40dp"
         android:layout_toLeftOf="@id/favourite"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/cd_scholarship_alert"
         android:src="@android:drawable/ic_dialog_alert" />
 
     <TextView

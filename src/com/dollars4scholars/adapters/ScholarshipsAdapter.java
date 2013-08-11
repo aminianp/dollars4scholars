@@ -1,5 +1,6 @@
 package com.dollars4scholars.adapters;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +17,12 @@ import com.example.dollars4scholars.R;
 
 public class ScholarshipsAdapter extends BaseAdapter {
 
-	private Scholarship[] scholarships;
+	private final Scholarship[] scholarships;
+	private final Activity activity;
 
-	public ScholarshipsAdapter(Scholarship[] scholarships) {
+	public ScholarshipsAdapter(Scholarship[] scholarships, Activity activity) {
 		this.scholarships = scholarships;
+		this.activity = activity;
 	}
 
 	@Override
@@ -65,7 +68,7 @@ public class ScholarshipsAdapter extends BaseAdapter {
 		holder.name.setText(scholarship.getName());
 		holder.dueDate.setText(scholarship.getDueDate());
 		holder.tracker.setVisibility(scholarship.isOnTrack() ? View.GONE : View.VISIBLE);
-		holder.tracker.setOnClickListener(new AlertButtonListener(scholarshipId));
+		holder.tracker.setOnClickListener(new AlertButtonListener(scholarshipId, activity));
 		holder.favourite.setChecked(scholarship.isFavourite());
 		holder.apply.setOnClickListener(new ApplyButtonListener(scholarshipId));
 	}

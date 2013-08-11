@@ -21,7 +21,7 @@ public class ScholarshipsFragment extends Fragment {
 		View view = inflater.inflate(R.layout.fragment_scholarships, container, false);
 		ListView scholarship = (ListView) view.findViewById(R.id.scholarships);
 		Scholarship[] scholarships = parseResponse(JSONFactory.getScholarships());
-		scholarship.setAdapter(new ScholarshipsAdapter(scholarships));
+		scholarship.setAdapter(new ScholarshipsAdapter(scholarships, getActivity()));
 		return view;
 	}
 

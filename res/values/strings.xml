@@ -2,12 +2,15 @@
 <resources>
 
     <string name="app_name">dollars4scholars</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
     <string name="apply">A</string>
     <string name="uh_oh">Uh Oh!</string>
     <string name="tracker_alert">Looks like you have fallen behind!</string>
     <string name="help">Help</string>
     <string name="forget_it">Forget It</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_scholarship_alert">Alert</string>
 
 </resources>
