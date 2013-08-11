@@ -1,28 +1,29 @@
 package com.dollars4scholars.activities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 
+import com.dollars4scholars.adapters.CoursesPagerAdapter;
 import com.example.dollars4scholars.R;
 
-public class PlannerActivity extends Activity {
+public class PlannerActivity extends FragmentActivity {
 
 	private static final String SCHOLARSHIP_ID = "scholarship_id";
 
 	public static void newInstance(Context context, String scholarshipId) {
 		Intent intent = new Intent(context, PlannerActivity.class);
 		intent.putExtra(SCHOLARSHIP_ID, scholarshipId);
-		context.startActivity(intent);		
+		context.startActivity(intent);
 	}
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_planner);
-		TextView fake = (TextView) findViewById(R.id.fake);
-		fake.setText(getIntent().getStringExtra(SCHOLARSHIP_ID));
+		ViewPager pager = (ViewPager) findViewById(R.id.planner_view_pager);
+		pager.setAdapter(new CoursesPagerAdapter(getSupportFragmentManager()));
 	}
 }
